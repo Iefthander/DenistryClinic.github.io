@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Denistry Clinic</title>
+</head>
+<body>
+    <div class="wrapper">
+         <header class="header">
+            <div class="header__container _container">
+                <a id="home" href="#home" class="header__logo">
+                    Denistry Clinic
+                </a>
+                <div id="sidemenu">
+                    <button class="sidemenu__btn" v-on:click="navOpen=!navOpen" v-bind:class="{active:navOpen}">
+                      <span class="top"></span>
+                      <span class="mid"></span>
+                      <span class="bottom"></span>
+                    </button>
+                    <transition name="translateX">
+                      <nav v-show="navOpen">
+                        <div class="sidemenu__wrapper">
+                          <ul class="sidemenu__list">
+                            <li class="sidemenu__item"><a href="home">Главная</a></li>
+                            <li class="sidemenu__item"><a href="#service">Услуги</a></li>
+                            <li class="sidemenu__item"><a href="#personal">Врачи</a></li>
+                            <li class="sidemenu__item"><a href="#enter">Запись</a></li>
+                            <li class="sidemenu__item"><a href="#about">О нас</a></li>
+                          </ul>
+                        </div>
+                      </nav>
+                    </transition>
+                  </div>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="index.html" class="menu__link">Главная</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#service" class="menu__link">Услуги</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#personal" class="menu__link">Врачи</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#enter" class="menu__link">Запись</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#about" class="menu__link">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <input type="text" placeholder="Поиск" v-model="search" class="header__input__search" type="search">
+         </header>
+         <main class="page">
+            <div class="page__mainblock mainblock">
+                <div class="mainblock__container _container">
+                    <div class="mainblock__body">
+                        <h1 class="mainblock__title">Максимальная ответственность и профессионализм.</h1>
+                        <div class="mainblock__buttons">
+                            <a href="#enter" class="mainblock__button">Записаться на приём</a>
+                        </div>
+                    </div>
+                </div>
+                    <div class="mainblock__image _ibg">
+                        <img src="img/cover.jpg" alt="cover">
+                    </div>
+            </div>
+            <section class="page__servives services">
+                <div class="services__container _container">
+                    <div class="services__header header-block">
+                        <h2 id="service" class="header-block__title">Услуги</h2>
+                    </div>
+                    <div class="services__body">
+                        <div class="services__column">
+                            <div class="services__item item-service">
+                                <div class="item-service__icon">
+                                    <img src="img/svg/01.svg" alt="ЛИЧНАЯ ГИГИЕНА">
+                                </div>
+                                <h3 class="item-service__title">ЛИЧНАЯ ГИГИЕНА</h3>
+                                <div class="item-service__text">-Профессиональная чистка зубов <p>-Отбеливание зубов <p>-Индивидуальные капы</div>
+                            </div>
+                        </div>
+                        <div class="services__column">
+                            <div class="services__item item-service">
+                                <div class="item-service__icon">
+                                    <img src="img/svg/02.svg" alt="ТЕРАПЕВТИЯ">
+                                </div>
+                                <h3 class="item-service__title">ТЕРАПЕВТИЯ</h3>
+                                <div class="item-service__text">-Эстетическая реставрация<p class="edit">-Лечение кариеса и некариозных поражений зуба</p></div>
+                            </div>
+                        </div>
+                        <div class="services__column">
+                            <div class="services__item item-service">
+                                <div class="item-service__icon">
+                                    <img src="img/svg/03.svg" alt="ПРОТЕЗИРОВАНИЕ">
+                                </div>
+                                <h3 class="item-service__title">ПРОТЕЗИРОВАНИЕ</h3>
+                                <div class="item-service__text">-Металлокерамические коронки <p>-Безметалловые коронки <p>-Съёмное протезирование</div>
+                            </div>
+                        </div>
+                        <div class="services__column">
+                            <div class="services__item item-service">
+                                <div class="item-service__icon">
+                                    <img src="img/svg/04.svg" alt="ОРТОДОНТИЯ">
+                                </div>
+                                <h3 class="item-service__title">ОРТОДОНТИЯ</h3>
+                                <div class="item-service__text">-Металлические брекеты<P>-Эстетические брекеты<P>-Ортодонтические пластины </div>
+                            </div>
+                        </div>
+                        <div class="services__column">
+                            <div class="services__item item-service">
+                                <div class="item-service__icon">
+                                    <img src="img/svg/05.svg" alt="ИМПЛАНТАЦИЯ ЗУБОВ">
+                                </div>
+                                <h3 class="item-service__title">ИМПЛАНТАЦИЯ ЗУБОВ</h3>
+                                <div class="item-service__text">-Корейская система<p>
+                                    <p>-Швейцарская система
+                                        <p>-Костная пластина</div>
+                            </div>
+                        </div>
+                        <div class="services__column">
+                            <div class="services__item item-service">
+                                <div class="item-service__icon">
+                                    <img src="img/svg/06.svg" alt="ДЕТСКАЯ СТОМАТОЛОГИЯ">
+                                </div>
+                                <h3 class="item-service__title">ДЕТСКАЯ СТОМАТОЛОГИЯ</h3>
+                                <div class="item-service__text">-Лечение кариеса молочных зубов<p>
+                                    <p>-Лечение пульпита молочных зубов
+                                        <p>-Удаление молочных зубов</div>
+                            </div>
+                        </div>
+                        <div class="services__column">
+                            <div class="services__item item-service">
+                                <div class="item-service__icon">
+                                    <img src="img/svg/07.svg" alt="ЛИЦЕВАЯ ХИРУРГИЯ">
+                                </div>
+                                <h3 class="item-service__title">ЛИЦЕВАЯ ХИРУРГИЯ</h3>
+                                <div class="item-service__text">-Простое удаление зуба<p>
+                                    -Зубосохраняющие операции<p>
+                                    -Удаление зубов мудрости</div>
+                            </div>
+                        </div>
+                        <div class="services__column">
+                            <div class="services__item item-service">
+                                <div class="item-service__icon">
+                                    <img src="img/svg/08.svg" alt="МАССАЖ">
+                                </div>
+                                <h3 class="item-service__title">МАССАЖ</h3>
+                                <div class="item-service__text">-Массаж лица<p>
+                                    -Спортивный массаж<p>
+                                    -Массаж спины </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="__image _ibg">
+                    <img src="img/services.jpg" alt="cover">
+                </div>-->
+            </section>
+            <section class="page__personal personal">
+                <div class="personal__container _container">
+                    <div class="personal__header header-block">
+                        <h2 id="personal" class="header-block__title">Врачи</h2>
+                    </div>
+                        <div class="personal__body">
+                            <div class="personal__column">
+                                <div class="personal__item">
+                                    <div class="personal__icon"><img src="img/svg/Ellipse 1.svg" alt="Павлов Владислав Витальевич"></div>
+                                    <div class="personal__title">Павлов Владислав Витальевич</div>
+                                    <div class="personal__text">Главный врач</div>
+                                </div>
+                            </div>
+                            <div class="personal__column">
+                                <div class="personal__item">
+                                    <div class="personal__icon"><img src="img/svg/Ellipse 2.svg" alt="Фистерова Светлана Дмитриевна"></div>
+                                    <div class="personal__title">Фистерова Светлана Дмитриевна</div>
+                                    <div class="personal__text">Врач-стоматолог терапевт</div>
+                                </div>
+                            </div>
+                            <div class="personal__column">
+                                <div class="personal__item">
+                                    <div class="personal__icon"><img src="img/svg/Ellipse 3.svg" alt="Александров Игорь Сергеевич"></div>
+                                    <div class="personal__title">Александров Игорь Сергеевич</div>
+                                    <div class="personal__text">Врач-стоматолог общей практики</div>
+                                </div>
+                            </div>
+                            <div class="personal__column">
+                                <div class="personal__item">
+                                    <div class="personal__icon"><img src="img/svg/Ellipse 4.svg" alt="Гришина Дарья Валентиновна"></div>
+                                    <div class="personal__title">Гришина Дарья Валентиновна</div>
+                                    <div class="personal__text">Врач-стоматолог терапевт, ортопед</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page__form form">
+                <div class="form__container _container">
+                    <div class="services__header header-block">
+                        <h2 id="enter" class="header-block__title">Записаться<br>на приём</h2>
+                    </div>
+                    <form action="#" id="form" class="form__body">
+                        <div class="form__item">
+                            <label for="formName" class="form__label">Имя*:</label>
+                            <input id="formName" type="text" name="name" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <label for="formEmail" class="form__label">E-mail*:</label>
+                            <input id="formEmail" type="text" name="email" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <label for="formPhone" class="form__label">Телефон*:</label>
+                            <input id="formPhone" type="text" name="phone" class="form__input">
+                        </div>
+                        <div class="form__item">
+                            <div class="form__label">Выберите филиал*:</div>
+                            <select name="age" id="" class="select">
+                                <option value="Проспект Просвещения" selected="selected">Проспект Просвещения</option>
+                                <option value="Звёздная">Звёздная</option>
+                                <option value="Купчино">Купчино</option>
+                                <option value="Дыбенко">Дыбенко</option>
+                            </select>
+                        </div>
+                        <div class="form__item">
+                            <div class="checkbox">
+                                <input id="formAgreement"  type="checkbox" name="agreement" class="checkbox__input">
+                                <label for="formAgreement" class="checkbox__label"><span>Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных *</span></label>
+                            </div>
+                        </div>
+                        <button id="example-2" class="form__button" type="submit" v-on:click="greet">Отправить</button>
+                    </form>
+                </div>
+                </form>
+            </section>
+            <section class="page__about about">
+                <div class="about__container _container">
+                    <div class="about__header header-block">
+                        <h2 id="about" class="header-block__title">О нас</h2>
+                    </div>
+                    <div class="about__body">
+                        <div class="about__text__body">
+                            <p>Группа клиник “Альтермед” работает в Санкт-Петербурге с 1999 года вот уже более 20-ти лет. Диагностируем, предупреждаем и лечим заболевания по шести основным направлениям - гинекология, урология, проктология, флебология, дерматология и косметология.</p><br>
+                            <p>86% наших пациентов полностью довольны обслуживанием и результатом лечения, что подтверждают их отзывы. Наш принцип - “не навреди”, а цель - как можно больше здоровых и довольных пациентов. И мы уверенно добиваемся этой цели на протяжении многих лет.</p><br>
+                            <p>Благодаря предварительной записи и четкой работе администраторов работаем без очередей и задержек. Соблюдаем конфиденциальность - для обращения в клинику не обязательно предъявлять документы</p>
+                        </div>
+                        <h2 class="aboutitem__title">Несколько фактов</h2>
+                        <div class="about__body__block">
+                            <div class="about__column">
+                                <div class="about__item">
+                                    <div class="about__icon"><img src="img/001.png" alt="Забота"></div>
+                                    <div class="about__text__icon">20 лет</div>
+                                    <div class="about__text">Заботимся о здоровье<br>пациентов с 2003 года</div>
+                                </div>
+                            </div>
+                            <div class="about__column">
+                                <div class="about__item">
+                                    <div class="about__icon"><img src="img/002.png" alt="Забота"></div>
+                                    <div class="about__text__icon">3 клинки рядом с метро</div>
+                                    <div class="about__text">Открываем новые филиалы в<br> разных районах города, <br>чтобы быть доступнее</div>
+                                </div>
+                            </div>
+                            <div class="about__column">
+                                <div class="about__item">
+                                    <div class="about__icon"><img src="img/003.png" alt="Забота"></div>
+                                    <div class="about__text__icon">30 врачей</div>
+                                    <div class="about__text">Ежедневно заботятся о вашем<br> здоровье</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </section>
+         </main>
+         <footer class="footer">
+            <div class="footer__top">
+                <div class="footer__main _container">
+                    <a href="#home" class="footer__logo">
+                        Denistry Clinic
+                    </a>
+                    <nav class="header__footer">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#home" class="footer__link">Главная</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#service" class="footer__link">Услуги</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#personal" class="footer__link">Врачи</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#enter" class="footer__link">Запись</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#about" class="footer__link">О нас</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__container _container">
+                    <div class="footer__copy">ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА</div>
+                    <div class="footer__social social">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="social__item">
+                            <img src="img/social/facebook.png" alt="facebook">
+                            <img src="img/social/inst.png" alt="instagram">
+                            <img src="img/social/whatsapp.png" alt="whatsapp">
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+         </footer>
+    </div>
+    <script src="vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
